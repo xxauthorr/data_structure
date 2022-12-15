@@ -1,0 +1,5 @@
+package nonlinear
+
+func GoToGraph(){
+	
+}
