@@ -57,7 +57,7 @@ There:
 
 func ChooseStructure() int {
 	var ans int
-	fmt.Println("Choose the data structure to work:")
+	fmt.Println("\nChoose the data structure to work:")
 	fmt.Println("1.Linear \n2.Non-Linear\n3.Exit")
 	fmt.Scan(&ans)
 	return ans
@@ -65,7 +65,7 @@ func ChooseStructure() int {
 
 func TakeLinear() int {
 	var ans int
-	fmt.Println("Choose your module:")
+	fmt.Println("\nChoose your module:")
 	fmt.Println("1.Stack \n2.Queue \n3.Linked List \n4.Go Back")
 	fmt.Scan(&ans)
 	return ans
@@ -73,7 +73,7 @@ func TakeLinear() int {
 
 func TakeNonLinear() int {
 	var ans int
-	fmt.Println("Choose your module:")
+	fmt.Println("\nChoose your module:")
 	fmt.Println("1.Tree \n2.Graph \n3.Go Back ")
 	fmt.Scan(&ans)
 	return ans

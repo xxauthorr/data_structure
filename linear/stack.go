@@ -2,6 +2,7 @@ package linear
 
 import "fmt"
 
+
 type stack struct {
 	items []int
 }
@@ -11,7 +12,8 @@ var Stack stack
 func GoToStack() {
 There:
 	var ans int
-	fmt.Println("Choose the operation:")
+
+	fmt.Println("\nChoose the operation:")
 	fmt.Println("1.Push \n2.Pop \n3.Display \n4.Back")
 	fmt.Scan(&ans)
 	switch ans {
@@ -37,11 +39,18 @@ There:
 
 func (s *stack) push(value int) {
 	s.items = append(s.items, value)
-	fmt.Scan("Enter to continue..")
+	fmt.Println("Value pushed successfully")
 }
 func (s *stack) pop() {
-
+	if len(s.items) == 0 {
+		fmt.Println("The stack is empty !")
+		return
+	}
+	toRemove := s.items[len(s.items)-1]
+	s.items = s.items[:len(s.items)-1]
+	fmt.Println("pop ", toRemove)
+	fmt.Println("Value poped successfully")
 }
 func (s *stack) display() {
-	fmt.Println(s.items)
+	fmt.Println("Stack: ", s.items)
 }
