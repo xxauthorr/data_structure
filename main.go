@@ -1,8 +1,10 @@
 package main
 
 import (
+	hashtable "data_structure/hash_table"
 	"data_structure/linear"
 	nonLinear "data_structure/non_linear"
+	"data_structure/sorting"
 	"fmt"
 	"os"
 )
@@ -47,6 +49,11 @@ There:
 			goto There
 		}
 	case 3:
+		sorting.GetArray()
+	case 4:
+		other()
+		goto There
+	case 5:
 		os.Exit(0)
 	default:
 		fmt.Println("Invalid choice !")
@@ -58,9 +65,27 @@ There:
 func ChooseStructure() int {
 	var ans int
 	fmt.Println("\nChoose the data structure to work:")
-	fmt.Println("1.Linear \n2.Non-Linear\n3.Exit")
+	fmt.Println("1.Linear \n2.Non-Linear\n3.Sorting\n4.Other\n5.Exit")
 	fmt.Scan(&ans)
 	return ans
+}
+
+func other() {
+	var choice int
+	var ht hashtable.Hashtable
+again:
+	fmt.Println("\nChoose the program to run :")
+	fmt.Println("1.Hash Table \n2.Back")
+	fmt.Scan(&choice)
+	switch choice {
+	case 1:
+		ht.HashTable()
+	case 2:
+		return
+	default:
+		fmt.Println("Invalid choice !!")
+		goto again
+	}
 }
 
 func TakeLinear() int {

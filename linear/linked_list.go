@@ -1,6 +1,8 @@
 package linear
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type node struct {
 	val  int
@@ -94,7 +96,7 @@ func (l *linkedList) traversal(n node) {
 		return
 	}
 	fmt.Println()
-	fmt.Print(l.head.val, " ")
+	fmt.Println(l.head.val, " ")
 	if l.head.next != nil {
 		l.addRepeat(l.head.next)
 		fmt.Println()
